@@ -350,36 +350,40 @@ section {
 }
 
 /* Pricing Section */
+/* Pricing Section */
 #pricing {
     background: var(--background-light);
 }
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
     margin-top: 60px;
+    align-items: stretch;
 }
 
 .plan-card {
     background: var(--secondary-color);
     border-radius: 16px;
-    padding: 40px 30px;
+    padding: 50px 35px;
     text-align: center;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
-    position: relative;
-    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
 }
 
 .plan-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .plan-card.featured {
-    border-color: var(--accent-color);
-    transform: scale(1.05);
+    border: 2px solid var(--accent-color);
+    transform: scale(1.03);
 }
 
 .plan-badge {
@@ -396,7 +400,7 @@ section {
 }
 
 .plan-header h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     margin-bottom: 20px;
     color: var(--primary-color);
@@ -407,7 +411,7 @@ section {
 }
 
 .plan-price .currency {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-light);
     vertical-align: top;
 }
@@ -423,16 +427,11 @@ section {
     color: var(--text-light);
 }
 
-.plan-price .custom {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
 .plan-features {
     list-style: none;
     margin-bottom: 40px;
     text-align: left;
+    flex-grow: 1;
 }
 
 .plan-features li {
@@ -449,6 +448,24 @@ section {
     color: var(--accent-color);
     font-weight: bold;
 }
+
+.plan-card a.cta-btn {
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* CTA Section */
 #cta-section {
