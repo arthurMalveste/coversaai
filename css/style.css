@@ -6,21 +6,22 @@
 }
 
 :root {
-    --primary-color: #000000;
-    --secondary-color: #ffffff;
-    --accent-color: #00d4aa;
-    --accent-hover: #00b894;
-    --text-light: #6c757d;
-    --text-dark: #2c3e50;
-    --background-dark: #0a0a0a;
-    --background-light: #f8f9fa;
-    --border-color: #e9ecef;
+    --primary-color: #ff9d04;        /* Cor principal - CONVERSAAI */
+    --secondary-color: #ffffff;      /* Fundo claro */
+    --accent-color: #ffaa02;         /* Botões e elementos de destaque */
+    --accent-hover: #ff7e00;         /* Cor de hover */
+    --text-light: #6c6c6c;           /* Texto secundário */
+    --text-dark: #2c2c2c;            /* Texto principal */
+    --background-dark: #1a1a1a;      /* Fundo escuro - hero e rodapé */
+    --background-light: #fff7ef;     /* Fundo claro com toque bege */
+    --border-color: #ffe0b3;         /* Bordas suaves */
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --border-radius: 8px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 body {
     font-family: var(--font-family);
@@ -39,6 +40,9 @@ body {
 /* Navigation */
 .navbar {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     top: 0;
     left: 0;
     right: 0;
@@ -48,13 +52,19 @@ body {
     z-index: 1000;
     transition: var(--transition);
 }
+.logo {
+    max-width: 180px;  /* diminui em mobile */
+    padding: 0;        /* retira excesso de padding */
+    display: block;
+}
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px; /* menor altura geral */
 }
+
 
 .nav-brand h2 {
     color: var(--primary-color);
@@ -143,10 +153,11 @@ body {
 .element {
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(45deg, var(--accent-color), #ffffff);
+    background: linear-gradient(45deg, #ff9d04, #ffaa02);
     opacity: 0.1;
     animation: float 6s ease-in-out infinite;
 }
+
 
 .element-1 {
     width: 200px;
@@ -285,16 +296,17 @@ section {
 }
 
 .shape-1 {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background:linear-gradient(135deg, #ff7e00 0%, #ff9d04 100%);
 }
 
 .shape-2 {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #ffaa02 0%, #ff7e00 100%);
 }
 
 .shape-3 {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #ff7e00 0%, #ff9d04 100%);
 }
+
 
 .service-card h3 {
     font-size: 1.5rem;
@@ -400,11 +412,13 @@ section {
 }
 
 .plan-header h3 {
-    font-size: 1.7rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--primary-color);
+    min-height: 50px; /* Garante que todos os títulos ocupem o mesmo espaço */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
 
 .plan-price {
     margin-bottom: 30px;
@@ -452,6 +466,9 @@ section {
 .plan-card a.cta-btn {
     margin-top: auto;
 }
+#btn-init {
+    font-size: 1.8rem;
+}
 
 /* Responsividade */
 @media (max-width: 1024px) {
@@ -472,6 +489,7 @@ section {
     background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a1a 100%);
     color: var(--secondary-color);
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .cta-content h2 {
@@ -487,6 +505,10 @@ section {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.desc-logo{
+    padding: 10px 15px;
 }
 
 /* Footer */
@@ -593,7 +615,12 @@ footer {
 @media (max-width: 768px) {
     .navbar .container {
         flex-direction: column;
+        padding-right: 0;
+        margin: 0;
         gap: 20px;
+    }
+    #btn-init{
+        font-size: 1.2rem;
     }
     
     .nav-links {
@@ -714,3 +741,86 @@ html {
         animation: none;
     }
 }
+
+/* --- MOBILE MENU MODERNO --- */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1100;
+    margin-left: 20px;
+}
+
+.mobile-menu-toggle span {
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Animação para "X" */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Menu deslizante */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 220px;
+        height: 100vh;
+        background: var(--secondary-color);
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 20px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        width: 100%;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    /* Fundo escuro ao abrir o menu */
+    body.menu-open::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        z-index: 900;
+    }
+}
+

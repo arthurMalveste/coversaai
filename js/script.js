@@ -260,3 +260,29 @@ window.AIExpertSite = {
     validateForm,
     isMobileDevice
 };
+
+function initializeNavigation() {
+    const navbar = document.querySelector('.navbar');
+    const mobileMenuButton = document.querySelector('.mobile-menu-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', function() {
+            navLinksContainer.classList.toggle('active');
+            mobileMenuButton.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    }
+}
+
+
