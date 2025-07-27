@@ -1,6 +1,4 @@
 
-Built by https://www.blackbox.ai
-
 ---
 
 # AI Expert - Intelligent Solutions for Your Business
