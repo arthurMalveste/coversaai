@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary-color: #ff9d04;        /* Cor principal - CONVERSAAI */
+    --primary-color: #eb0101;        /* Cor principal - CONVERSAAI */
     --secondary-color: #ffffff;      /* Fundo claro */
-    --accent-color: #ffaa02;         /* Botões e elementos de destaque */
-    --accent-hover: #ff7e00;         /* Cor de hover */
+    --accent-color: #ff5602;         /* Botões e elementos de destaque */
+    --accent-hover: #dd460a;         /* Cor de hover */
     --text-light: #6c6c6c;           /* Texto secundário */
     --text-dark: #2c2c2c;            /* Texto principal */
     --background-dark: #1a1a1a;      /* Fundo escuro - hero e rodapé */
