@@ -1,72 +1,65 @@
+# 🧠 ConversaAi
 
-Built by https://www.blackbox.ai
+Automatize o atendimento e negociações via WhatsApp com inteligência artificial.
+
+![Logo ConversaAi](./img/logo%20recortada.png)
+
+## 💡 Sobre o Projeto
+
+O **ConversaAi** é uma plataforma inteligente desenvolvida para automatizar **atendimentos, cobranças e negociações** via WhatsApp. Ideal para empresas que buscam eficiência, redução de custos e escalabilidade no relacionamento com seus clientes.
+
+Este projeto é uma **landing page responsiva** que apresenta os planos e funcionalidades do ConversaAi, permitindo que o usuário entre em contato rapidamente via WhatsApp.
 
 ---
 
-# AI Expert - Intelligent Solutions for Your Business
+## 🚀 Funcionalidades
 
-## Project Overview
+- Apresentação de planos com destaque para automação de cobrança
+- Integração direta com WhatsApp (botão CTA)
+- Layout moderno com paleta inspirada na marca
+- Menu mobile com animação
+- Totalmente responsivo
+- SEO friendly
 
-AI Expert is a web-based application designed to provide intelligent AI solutions tailored for businesses seeking to enhance their operations through automation, real-time analytics, and seamless integration. The platform promotes various AI services that facilitate digital transformation, helping businesses harness the power of artificial intelligence effectively.
+---
 
-## Installation
+---
 
-To get started with the AI Expert web application, follow these instructions:
+## 📱 Responsividade
 
-1. **Clone the repository:**
+A interface foi cuidadosamente projetada para funcionar bem em:
 
-   ```bash
-   git clone https://github.com/yourusername/ai-expert.git
-   ```
+- 🖥️ Desktop
+- 📱 Smartphones
+- 📱 iPhones
+- 📲 Telas pequenas com menu mobile interativo
 
-2. **Navigate to the project directory:**
+---
 
-   ```bash
-   cd ai-expert
-   ```
+## 🛠️ Tecnologias Utilizadas
 
-3. **Open the project in your preferred web browser. You can simply open `index.html` file:**
+- **HTML5**
+- **CSS3**
+- **JavaScript Vanilla**
+- **Google Fonts - Inter**
+- **WhatsApp API (wa.me)**
 
-   ```bash
-   open index.html  # Mac users
-   xdg-open index.html  # Linux users
-   start index.html  # Windows users
-   ```
+---
+## 🔧 Como Usar
 
-## Usage
-
-Once you've opened the application, you can explore various sections to learn about:
-
-- **Services:** AI automation, real-time analytics, and seamless integration.
-- **Advantages:** Key benefits of choosing AI Expert for your business.
-- **Pricing:** Different subscription plans available to suit your needs.
-- **Contact:** Reach out via WhatsApp or email for more information.
-
-Feel free to interact with the Call to Action buttons to engage with AI Expert directly.
-
-## Features
-
-- **Intelligent Automation:** Streamline workflows to enhance productivity.
-- **Real-time Analytics:** Access instant insights from business data.
-- **Seamless Integration:** Connect AI solutions with existing systems.
-- **User-Friendly Interface:** Design that prioritizes ease of use.
-- **24/7 Support:** Continuous assistance to help businesses operate smoothly.
-
-## Dependencies
-
-The project utilizes specific dependencies which can be found in the `package.json` file. For this HTML-based application, no external JavaScript libraries have been declared in a package.json within the provided content. If you're integrating with a backend or using JavaScript libraries, please document those dependencies here.
-
-## Project Structure
-
-```
-ai-expert/
-├── index.html          # Main application file
-├── css/
-│   └── style.css      # Stylesheet for app styling
-└── js/
-    └── script.js      # JavaScript file for interactivity (if included)
+1. Clone este repositório:
+```bash
+git clone https://github.com/seu-usuario/conversaai.git
 ```
 
-## Conclusion
+Abra o projeto em seu navegador:
 
-This project serves as an introductory platform to offer AI solutions for businesses. The AI Expert aims to empower organizations with advanced technology that is both innovative and user-centric, fostering growth and enhancing operational efficiency.
+```bash
+cd conversaai
+npx live-server
+```
+Ou simplesmente abra o index.html com seu navegador.
+
+
+
+
