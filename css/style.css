@@ -234,6 +234,7 @@ body {
 /* Section Styles */
 section {
     padding: 80px 0;
+    background-color: var(--background-dark);
 }
 
 .section-header {
@@ -881,80 +882,66 @@ html {
     margin-top: 60px;
 }
 
-#agents-ai {
-  position: relative;
-  background: radial-gradient(circle at center, #1b1b1b 0%, #111 100%);
-  padding: 120px 0;
-  overflow: hidden;
-  z-index: 1;
+#agents-modern {
+  padding: 120px 20px;
+  background: #f9f9f9;
 }
 
-#agents-ai .container {
-  position: relative;
-  z-index: 2;
+.agents-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
-.section-header.bright h2,
-.section-header.bright p {
-  color: #fff;
-}
-
-.agents-bg-glow {
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1200px;
-  height: 1200px;
-  background: radial-gradient(circle, rgba(255,85,0,0.15) 0%, transparent 70%);
-  z-index: 0;
-  pointer-events: none;
-  filter: blur(80px);
-}
-
-.agents-3d-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.agents-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
   gap: 40px;
-  margin-top: 60px;
+  flex-wrap: wrap;
 }
 
-.agent-3d-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 30px 25px;
-  text-align: center;
-  color: #fff;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 15px 60px rgba(0,0,0,0.4);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform-style: preserve-3d;
-  perspective: 1000px;
+.agents-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.agent-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.agent-text h3 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.agent-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.agent-image {
+  flex: 1 1 400px;
+  max-width: 500px;
   position: relative;
 }
 
-.agent-3d-card:hover {
-  transform: translateY(-10px) rotateX(1deg) rotateY(-1deg);
-  box-shadow: 0 25px 80px rgba(255, 90, 0, 0.3);
+.agent-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
 }
 
-.agent-icon-glow {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  color: #ff5602;
-  text-shadow: 0 0 10px rgba(255, 86, 2, 0.7);
+.agent-image img:hover {
+  transform: scale(1.03);
 }
 
-.agent-3d-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  color: #fff;
+.imagem{
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: contain;
 }
-
-.agent-3d-card p {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.5;
-}
-

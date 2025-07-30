@@ -312,3 +312,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Responsivo
     window.addEventListener('resize', updateCarousel);
 });
+// Animação reveal ao rolar
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
+
+  function animateOnScroll() {
+    reveals.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+        el.style.animation = 'fadeInUp 0.8s ease forwards';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateOnScroll);
+  animateOnScroll(); // inicial
+});
