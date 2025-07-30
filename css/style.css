@@ -234,7 +234,7 @@ body {
 /* Section Styles */
 section {
     padding: 80px 0;
-    background-color: var(--background-dark);
+    /* background-color: var(--background-dark); */
 }
 
 .section-header {
@@ -944,4 +944,32 @@ html {
     max-width: 500px;
     max-height: 500px;
     object-fit: contain;
+}
+
+.plan-features li.inherits {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.plan-features li.inherits .plus {
+  display: inline-block;
+  margin: 0 10px;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-right: 10px;
+  line-height: 20px;
+}
+
+.destaque{
+    color: var(--accent-color);
 }
