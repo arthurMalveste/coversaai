@@ -250,7 +250,7 @@ section {
 }
 
 .section-header p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
@@ -319,6 +319,7 @@ section {
 .service-card p {
     color: var(--text-light);
     line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 /* Advantages Section */
@@ -352,7 +353,7 @@ section {
 
 .advantage-card h3 {
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 1.2rem;
     margin-bottom: 15px;
     color: var(--primary-color);
 }
@@ -360,6 +361,7 @@ section {
 .advantage-card p {
     color: var(--text-light);
     line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 /* Pricing Section */
@@ -873,7 +875,7 @@ html {
 
 .card-text p {
     color: var(--text-light);
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
@@ -918,7 +920,7 @@ html {
 }
 
 .agent-text p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #555;
   line-height: 1.6;
 }
@@ -972,4 +974,79 @@ html {
 
 .destaque{
     color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  #agents-modern {
+    padding: 40px 0;
+  }
+
+  .agents-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .agents-row,
+  .agents-row.reverse {
+    display: grid;
+    grid-template-areas:
+      "img"
+      "text";
+    justify-items: center;
+    margin-bottom: 32px;
+  }
+
+  .agents-row .agent-image {
+    grid-area: img;
+  }
+
+  .agents-row .agent-text {
+    grid-area: text;
+    padding: 10px 20px 0;
+    text-align: center;
+  }
+
+  .agent-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .agent-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+
+  .agent-text p {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+#real-system-modern .section-header h2 {
+  font-size: 2.5rem; /* antes: clamp padrão */
+}
+
+#real-system-modern .section-header p {
+  font-size: 1.25rem;
+  max-width: 700px;
+}
+
+.card-text h3 {
+  font-size: 1.5rem; /* antes 1.3rem */
+  margin-bottom: 10px;
+}
+
+.card-text p {
+  font-size: 1.1rem; /* antes 1rem */
+  line-height: 1.7;
+}
+.modern-card img {
+  width: 100%;
+  height: 280px; /* antes: auto */
+  object-fit: cover;
 }
