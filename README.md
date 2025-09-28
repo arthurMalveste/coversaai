@@ -32,7 +32,6 @@ A interface foi cuidadosamente projetada para funcionar bem em:
 - 🖥️ Desktop
 - 📱 Smartphones
 - 📱 iPhones
-- 📲 Telas pequenas com menu mobile interativo
 
 ---
 
