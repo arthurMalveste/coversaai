@@ -1076,3 +1076,28 @@ html {
   object-fit: cover;
 }
 
+.condicao{
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.asterisco{
+    color: var(--accent-color);
+    font-size: 1.6rem;
+}
+
+.condicao-div{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 10px;
+    padding-top: 10px;
+}
